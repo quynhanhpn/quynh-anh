@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif; */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  color: #9E513B;
+}
+/* .container{
+    max-width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+} */
+.container {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/***************** HEADER ********************/
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: white;
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+}
+
+
+.nav-menu {
+  position: relative;
+}
+.nav-logo {
+  color: #9E513B;
+  margin-left: 70px;
+}
+.nav-logo {
+  font-family: "Raleway", sans-serif;
+  font-size: 35px;
+}
+/***** BARS:START *****/
+.nav-menu {
+  position: relative;
+  display: flex;
+}
+.nav-list a::after{
+  content: "";
+  height: 3px;
+  width: 0px;
+  background: rgb(218, 213, 213);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.25s ease-in-out;
+}
+.nav-list a:hover::after{
+  width: 100%;
+}
+
+  .nav-toggle,
+  .nav-close {
+    display: none;
+  }
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-menu ul li {
+    padding-right: 20px;
+    cursor: pointer;
+  }
+  .nav-link {
+    font-size: 20px;
+    position: relative;
+    padding-bottom: 5px;
+  }
+  
+  .nav-menu ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "Raleway", sans-serif;
+    color: #9E513B;
+    padding: 4px;
+  }
+  .nav-toggle {
+    color: #9E513B;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  .nav-icon {
+    font-size: 19px;
+    color: #9E513B;
+    margin-left: 40px;
+    padding: 20px;
+  }
+/***** BARS:END *****/
+/***************** HEADER:END *****************/
+/************** HOME:START *************/
+/**BODY:START**/
+.body{
+  background-color: rgb(248, 242, 239);
+  height: 95vh;
+  width: 100%;
+  
+}
+.login{
+  width: 550px;
+  height: 65vh;
+  padding: 30px;
+  background-color:white;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  margin-top: 80px;
+  font-size: 20px;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+}
+.login h1{
+  font-size: 14px;
+  text-align: center;
+  margin-top: 25px;
+}
+.login input{
+  margin: 10px;
+  padding: 8px;
+  border: 1px solid #9E513B;
+}
+.login button{
+  margin: 10px;
+  padding: 8px;
+  background: white;
+  color: #9E513B;
+  border: 2px solid #9E513B;
+}
+.login button:hover {
+  background: rgb(248, 244, 243);
+}
+.login a{
+  margin-top: 25px;
+  font-size: 16px;
+  color: #9E513B;
+  position: relative;
+  width: 88px;
+  margin-left: 40%;
+  padding: 1px;
+}
+.login a::after{
+  content: "";
+  height: 2px;
+  width: 0px;
+  background: #9E513B;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.25s ease-in-out;
+}
+.login a:hover::after{
+  width: 100%;
+}
+/* SIXTH:START */
+.sixth-card{
+  background-color: rgb(173, 69, 35);
+  height: 60vh;
+  width: 100%;
+  display: flex;
+}
+.sixth-contents{
+  height: 100%;
+  width: 65%;
+  background-color: rgb(248, 242, 239);
+}
+.logo{
+  margin-left: 30px;
+  margin-top: 50px;
+  font-size: 30px;
+}
+.texts{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+.text1{
+  font-size: 14px;
+  margin-left: 30px;
+  line-height: 22px;
+}
+.text1 p{
+  margin-bottom: 15px;
+}
+.text2{
+  font-size: 14px;
+  line-height: 22px;
+}
+.text3{
+  margin-right: 150px;
+  font-size: 14px;
+  line-height: 22px;
+}
+.text3 p{
+  margin-bottom: 25px;
+}
+.texts h5{
+  margin-bottom: 15px;
+}
+.sign-up h5{
+  font-size: 30px;
+  margin: 70px 0px 35px 30px;
+  color: white;
+}
+.sign-up p{
+  margin-left:30px ;
+  font-size: 35px;
+  line-height: 55px;
+  color: white;
+}
+/* SIXTH:END */
+/* FOOTER */
+.footer{
+  height: 10vh;
+  padding-top:20px ;
+  width: 100%;
+  display: flex;
+  color: gray;
+  background: rgb(237, 235, 235);
+}
+.footer p{
+  margin-left:75%;
+}
+.icon{
+  display: flex;
+  margin-left: 30px;
+}
+.icon li {
+  padding: 10px;
+}
