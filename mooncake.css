@@ -5,13 +5,13 @@ font-family: 'Raleway', sans-serif; */
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
 }
 html {
   scroll-behavior: smooth;
   margin: 0;
   color: #9E513B;
-  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+
 }
 /* .container{
     max-width: 65%;
@@ -310,48 +310,97 @@ a {
   }
 }
 /************** HOME:END *************/
-.box{
- margin-top: 200px;
- height: auto;
- width: 50%;
- margin-left: auto;
- margin-right: auto;
+/* FIRST:START */
+.first{
+   padding-top: 100px;
+   height: 100%;
+   width: 100%;
 }
-.accordion {
-    background: white;
-    color: #9E513B;
-    cursor: pointer;
-    padding: 20px 0px;
+.story  {
+  height: 40%;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.story h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #9E513B;
+  font-size: 50px;
+}
+.story p{
+  margin-top: 50px;
+}
+.first-cards{
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 80%;
+    justify-content:center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1.tiltle {
+    position: relative;
+    color: rgb(170, 3, 3);
     width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 17px;
-    transition: 0.4s;
+    text-align: center;
+    font-size: 50px;
+}
+  .first-card{
+    max-width: 25%;
+    height: 60%;
+    margin: 25px;
   }
-  
-  .accordion:after {
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .active:after {
-  }
-  .line{
-    height: 1px;
+  .offer-col-card {
+    position: relative;
     width: 100%;
-    background: #9E513B;
-  }
-  .panel {
-    font-size: 13px;
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
+    height: 60%;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
   }
-/* SIXTH:START */
+  .img-box img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    background-color: red;
+
+  }
+  .first-content{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    margin: 10px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #333;
+  }
+  .content-box {
+  
+    position: absolute;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    bottom: -30%;
+    right: 0;
+    width: 92%;
+    height: 16%;
+    transition: 0.5s;
+    color: #333;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 12px 14px;
+  }
+  .offer-col-card:hover .content-box {
+    bottom: 0;
+  }
+  
+  .content-box a{
+    color: #545a5c;
+  }
+  
+  /* FIRST:END */
+  /* SIXTH:START */
 .sixth-card{
     margin-top: 150px;
     background-color: rgb(173, 69, 35);
@@ -428,4 +477,4 @@ a {
   .icon li {
     padding: 10px;
   }
-  /* FOOTER:END */
+  

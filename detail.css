@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+
+}
+.content{
+    margin-top: 150px;
+    height: 75vh;
+    width: 80%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img-box{
+    height: 80%;
+    width:  60%;
+}
+.img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.img-wrapper{
+    display: flex;
+    height: 20%;
+    width: 100%;
+    margin: 40px;
+
+}
+.img-wrapper div{
+    margin: 5px;
+}
+.img-wrapper img{
+    height: 100%;
+    width: 100%;
+}
+.product-info{
+    width: 40%;
+    height: 100%;
+    padding: 60px;
+}
+.product-name {
+   font-size: 20px;
+}
+.quantity{
+    height: 42px;
+    width: 100px;
+    border: 1px solid #9E513B;
+    text-align: center;
+    margin-top: 50px;
+}
+.quantity button{
+   color: #9E513B;
+}
+.quantity input{
+    width: 30px;
+    height: 100%;
+    border:none;
+    text-align: center;
+    font-size: 15px;
+    color: #9E513B;
+}
+.quantity button{
+    height: 100%;
+    width: 30px;
+    border:none;
+    font-size: 15px;
+    background-color: white;
+}
+.product-buttom1{
+    height: 55px;
+    width: 100%;
+    margin-top: 15px;
+    color: #9E513B;
+    background-color: white;
+    border: 1px solid #6d311f;
+}
+.product-buttom1:hover{
+    background: rgb(248, 244, 243);
+}
+.product-buttom2{
+    height: 55px;
+    width: 100%;
+    margin-top: 15px;
+    color: white;
+    background-color: #9E513B;
+    border: 1px solid #6d311f;
+}
+.description{
+    margin-top: 8px;
+}
+.preserve{
+    line-height: 40px;
+    margin-top: 150px;
+    height: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}

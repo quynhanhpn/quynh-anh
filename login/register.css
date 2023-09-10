@@ -126,7 +126,7 @@ a {
   width: 100%;
   
 }
-.login{
+.register{
   width: 550px;
   height: 65vh;
   padding: 30px;
@@ -137,31 +137,31 @@ a {
   margin-top: 80px;
   font-size: 20px;
 }
-.login{
+.register{
   display: flex;
   flex-direction: column;
 }
-.login h1{
+.register h1{
   font-size: 14px;
   text-align: center;
   margin-top: 25px;
 }
-.login input{
+.register input{
   margin: 10px;
   padding: 8px;
   border: 1px solid #9E513B;
 }
-.login button{
+.register button{
   margin: 10px;
   padding: 8px;
   background: white;
   color: #9E513B;
   border: 2px solid #9E513B;
 }
-.login button:hover {
+.register button:hover {
   background: rgb(248, 244, 243);
 }
-.login a{
+.register a{
   margin-top: 25px;
   font-size: 16px;
   color: #9E513B;
@@ -170,7 +170,7 @@ a {
   margin-left: 40%;
   padding: 1px;
 }
-.login a::after{
+.register a::after{
   content: "";
   height: 2px;
   width: 0px;
@@ -180,7 +180,7 @@ a {
   left: 0;
   transition: all 0.25s ease-in-out;
 }
-.login a:hover::after{
+.register a:hover::after{
   width: 100%;
 }
 /* SIXTH:START */

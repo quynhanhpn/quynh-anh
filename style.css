@@ -5,12 +5,14 @@ font-family: 'Raleway', sans-serif; */
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
 }
 html {
   scroll-behavior: smooth;
   margin: 0;
   color: #9E513B;
+  /* font-family: serif; */
+  font-family: "Open Sans", sans-serif;
+
 }
 /* .container{
     max-width: 65%;
@@ -68,11 +70,11 @@ a {
   content: "";
   height: 3px;
   width: 0px;
-  background: rgb(218, 213, 213);
+  background: #CDC5BF;
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.20s ease-in-out;
 }
 .nav-list a:hover::after{
   width: 100%;
