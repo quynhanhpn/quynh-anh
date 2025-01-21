@@ -10,6 +10,7 @@ html {
   scroll-behavior: smooth;
   margin: 0;
   color: #9E513B;
+  /* font-family: serif; */
   font-family: "Open Sans", sans-serif;
 
 }
@@ -31,6 +32,9 @@ ul {
 a {
   text-decoration: none;
 }
+button{
+  border: none;
+}
 .header {
   width: 100%;
   position: fixed;
@@ -43,7 +47,7 @@ a {
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
   align-items: center;
   height: 90px;
 }
@@ -67,13 +71,13 @@ a {
 }
 .nav-list a::after{
   content: "";
-  height: 3px;
+  height: 2px;
   width: 0px;
-  background: rgb(218, 213, 213);
+  background: #CDC5BF;
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.20s ease-in-out;
 }
 .nav-list a:hover::after{
   width: 100%;
@@ -87,12 +91,12 @@ a {
   .nav-close {
     display: none;
   }
-  .nav-menu ul {
+  .nav-list {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .nav-menu ul li {
+  .nav-item {
     padding-right: 20px;
     cursor: pointer;
   }
@@ -117,10 +121,44 @@ a {
   .nav-icon {
     font-size: 19px;
     color: #9E513B;
-    margin-left: 40px;
+    margin-left: 20px;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dropbtn {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
   }
 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    display: none;
+
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content li  {
+    font-size: 15px;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-content {display: block;}
+  
 /***** BARS:END *****/
 /***************** HEADER:END *****************/
 /************** HOME:START *************/
@@ -311,10 +349,81 @@ a {
 }
 /************** HOME:END *************/
 .container-cart{
-    background-color: antiquewhite;
-    height: 100px;
-    width: 100%;
-    margin-top: 100px;
+    height: auto;
+    width: 70%;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cart-wrapper{
+  height: auto  ;
+  width: 100%;
+}
+.cart{
+  display: flex;
+}
+.continue{
+  width: 50%;
+}
+.continue a{
+  font-size: 13px;
+}
+.price{
+  width: 25%;
+  text-align: center;
+  align-items: center;
+}
+.total{
+  width: 25%;
+  text-align: center;
+  align-items: center;
+}
+.cart-item{
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  padding: 20px 0px;
+}
+.item-img{
+  max-height:  100px;
+  max-width:  100px;
+}
+.item-img img{
+  height: 100%;
+  width: 100%;
+}
+.item-title{
+  padding-left: 25px; 
+}
+.item-price{
+  padding-right:60px ;
+  max-height: 100px;
+}
+.item-total{
+  max-height: 100px;
+  padding-right: 20px;
+}
+.pay{
+  display: flex;
+  height: 60px;
+  width: 100%;
+}
+.btn-deleted{
+  background-color:rgb(248, 242, 239) ;
+  border: 1px solid #9E513B;
+  color: #9E513B;
+  height: 25px;
+  width: 30px;
+  margin-left: 15px;
+}
+.pay-btn{
+  border: 1px solid white ;
+  color: white;
+  height: 60px;
+  width: 25%;
+  background-color: #9E513B;
 }
 /* SIXTH:START */
 .sixth-card{

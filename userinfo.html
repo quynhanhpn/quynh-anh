@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Trang thông tin cá nhân</h1>
+
+    <div id="user-info">
+        <p>Xin chào, <span id="user_email"></span></p>
+    </div>
+    <img style="width: 100px; height: 100px;" id="image_user_abc" src="" alt="">
+    <div id="username"></div>
+    <h2>Thay đổi thông tin</h2>
+    <form id="user-form">
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="image_user">
+        <input type="number" id="phone" placeholder="Phone">
+        <button type="submit">Cập nhật</button>
+    </form>
+
+
+    <script src="config.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+        import { getAuth, updateProfile, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js';
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        var nameDefault = null;
+        var imgDefault = null;
+        var phoneDefault = null
+        onAuthStateChanged(getAuth(), function (user) {
+            console.log(user.providerData)
+            user.providerData.forEach((profile) => {
+                console.log("Sign-in provider: " + profile.providerId);
+                console.log("  Provider-specific UID: " + profile.uid);
+                console.log("  Name: " + profile.displayName);
+                console.log("  Email: " + profile.email);
+                console.log("  Photo URL: " + profile.photoURL);
+                document.getElementById('image_user_abc').src = profile.photoURL;
+                document.getElementById('username').innerText = " Ten user :" + profile.displayName;
+                nameDefault = profile.displayName;
+                imgDefault = profile.photoURL;
+            })
+            var user_info = document.getElementById('user-info');
+            var usernameElement = document.getElementById('user_email');
+            usernameElement.textContent = user.displayName ? user.displayName : user.email;
+
+        });
+        // Lắng nghe sự kiện gửi biểu mẫu đăng ký
+        var signupForm = document.getElementById('user-form');
+        signupForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var name = document.getElementById('name').value;
+            var image_user = document.getElementById('image_user').value;
+            var phone = document.getElementById('phone').value;
+            console.log(phone);
+            name = name === "" ? nameDefault : name;
+            image_user = image_user === "" ? imgDefault : image_user;
+            // Đăng ký bằng Firebase Auth
+            updateProfile(getAuth().currentUser, {
+                displayName: name, photoURL: image_user, phoneNumber : phone,
+            }).then(() => {
+                window.location.reload()
+            }).catch(function (error) {
+                    // Xử lý lỗi đăng ký
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    console.log('Lỗi :' + errorMessage);
+                });
+        });
+    </script>
+</body>
+
+</html>

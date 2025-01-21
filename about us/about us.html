@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="about us.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+
 <body>
      <!-- HEADER:START -->
     <header class="header" id="header">
@@ -16,28 +17,36 @@
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="/order/order.html" class="nav-link">Đặt hàng </a>
+                        <a href="../products/product.html" class="nav-link">Đặt hàng </a>
                     </li>
                     <li class="nav-item">
                         <a href="about us.html" class="nav-link">Về Bakes</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/question/question.html" class="nav-link">Câu hỏi thương gặp</a>
+                        <a href="../question/question.html" class="nav-link">Câu hỏi thương gặp</a>
                     </li>
                 </ul>
-                <ul class="nav-icon">
-                    <li>
-                        <a href="/login/login.html"><i class="fa-regular fa-user"></i></a>
+                <ul class="nav-icon" icon>
+                    <li id="icon-login" style="display: block; margin-right: 20px"  >
+                        <a href="../login/login.html"><i class="fa-regular fa-user"></i></a>
+                    </li>
+                    <li id="checkuser" class="dropdown">
+                        <ul class="dropbtn"><i class="fa-solid fa-user"></i> </ul>
+                        <ul class="dropdown-content">
+                            <li><a href="userinfo.html" id ="userinfo">User</a></li>
+                            <li ><button id="logout_btn" style="color: #9E513B;">Đăng Xuất</button></li>
+                            <li style="display: none;"  id="managa_btn"><button><a href="../managerproduct.html">Chỉnh sửa sản phẩm</a></button></li>
+                        </ul>
                     </li>
                     <li>
-                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="../products/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                     </li>
                 </ul>
             </div>  
         </nav>
     </header>
     <section class="home" id="home">
-        <img src="/ảnh/anh3.webp" alt="" class="home-img">        
+        <img src="../picture/anh3.webp" alt="" class="home-img">        
         <div class="home-container container ">
             <div class="home-data">
                 <h1 class="home-data-subtitle"></h1>
@@ -81,7 +90,7 @@
     <!-- SECOND:END -->
     <div class="second-card">
         <div class="second-img">
-            <img src="/ảnh/anh21.webp" alt="">
+            <img src="../picture/anh21.webp" alt="">
         </div>
         <div class="second-content">
             <h3>NHÀ BẾP CỦA CHÚNG TA</h3>
@@ -102,7 +111,7 @@
         </div>
         <div class="third-cards">
             <div class="third-card">
-                <img src="/ảnh/anh52.jpg" alt="">
+                <img src="../picture/anh52.jpg" alt="">
                 <div class="third-content">
                   <h3>NHÂN VIÊN BÁN HÀNG</h3>
                    <p>
@@ -115,7 +124,7 @@
                 </div>
             </div>
             <div class="third-card">
-                <img src="/ảnh/anh51.jpg" alt="">
+                <img src="../picture/anh51.jpg" alt="">
                 <div class="third-content">
                   <h3>BARISTA</h3>
                    <p>
@@ -127,7 +136,7 @@
                 </div>
             </div>
             <div class="third-card">
-                <img src="/ảnh/anh7.webp" alt="">
+                <img src="../picture/anh7.webp" alt="">
                 <div class="third-content">
                   <h3>COMMIS</h3>
                    <p>
@@ -144,7 +153,7 @@
  <!--FOURTH:START-->
  <div class="fourth-card">
     <div class="fourth-img">
-        <img src="/ảnh/anh53.jpg" alt="">
+        <img src="../picture/anh53.jpg" alt="">
     </div>
     <div class="fourth-content">
         <h3>CHÚNG TÔI ĐANG TUYỂN DỤNG!</h3>
@@ -218,5 +227,7 @@
         <p>© BAKES SAIGON 2023.</p>
     </div>
     <!--FOOTER:END-->
+    <script src="../login/config.js"></script>
+    <script type="module" src="../main.js"></script>
 </body>
 </html>

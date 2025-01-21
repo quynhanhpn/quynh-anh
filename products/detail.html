@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER:START -->
+    <header class="header" id="header">
+        <nav class="nav ">
+            <a href="/index.html" class="nav-logo">B A K E S</a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="./product.html" class="nav-link">Đặt hàng </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../about us/about us.html " class="nav-link">Về Bakes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../question/question.html" class="nav-link">Câu hỏi thương gặp</a>
+                    </li>
+                </ul>
+                <ul class="nav-icon" icon>
+                    <li id="icon-login" style="display: block; margin-right: 20px"  >
+                        <a href="../login/login.html"><i class="fa-regular fa-user"></i></a>
+                    </li>
+                    <li id="checkuser" class="dropdown">
+                        <ul class="dropbtn"><i class="fa-solid fa-user"></i> </ul>
+                        <ul class="dropdown-content">
+                            <li><a href="userinfo.html" id ="userinfo"></a></li>
+                            <li ><button id="logout_btn" style="color: #9E513B;">Đăng Xuất</button></li>
+                            <li style="display: none;"  id="managa_btn"><button><a href="../managerproduct.html">Chỉnh sửa sản phẩm</a></button></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../products/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--start:content-->
+    <div id="content">
+
+    </div>
+
+    <div class="preserve">
+
+        <h4>Bảo quản </h4>
+        <p>
+            Các loại bánh sinh nhật khác nhau có yêu cầu bảo quản khác nhau. Bảo quản bánh ngọt của bạn đúng cách sẽ đảm
+            bảo
+            hương vị tuyệt vời.
+            <br>
+            ❄️ Bảo quản lạnh trong bao bì hoặc hộp bánh để tránh bị ám mùi từ thực phẩm khác.
+            <br>
+            🍽 Ăn trong vòng 3 ngày.
+        </p>
+    </div>
+    <!--SIXTH:START-->
+    <div class="sixth-card">
+        <div class="sixth-contents">
+            <div class="logo">
+                <h1>B A K E S</h1>
+            </div>
+            <div class="texts">
+                <div class="text1">
+                    <h5>VỀ BAKES</h5>
+                    <p>
+                        Một tiệm bánh ngọt Pháp. Bakes tin <br>
+                        rằng bánh ngọt nên giống như tình yêu: <br>
+                        thú vị, chu đáo và trung thực.
+                    </p>
+                    <spam>Còn lại chỉ là bao bì.</spam>
+                </div>
+                <div class="text2">
+                    <h5>DỊCH VỤ KHÁCH HÀNG</h5>
+                    <p>
+                        Hotline: +84 902 77 42 44 <br>
+                        Đối tác thương hiệu: +84 909 55 88 49 <br>
+                        (Thứ 2 - Thứ 6, 09:00 - 18:00) <br>
+                    </p>
+                    <p>Email: team@bakes-saigon.com</p>
+                </div>
+                <div class="text3">
+                    <h5>ĐẾN THĂM BAKES</h5>
+                    <p>
+                        Bakes Thảo Điền <br>
+                        Tiệm Bánh Mặn, Ngọt, Bistro và Bar <br>
+                        16 Thảo Điền, Quận 2, TP.HCM <br>
+                    </p>
+                    <spam>
+                        Bakes Hồ Con Rùa <br>
+                        Tiệm Bánh Mặn và Ngọt <br>
+                        47 Trần Cao Vân, Quận 3, TP.HCM <br>
+                    </spam>
+                </div>
+            </div>
+        </div>
+        <div class="sign-up">
+            <h5>Tham Gia Bakes Club</h5>
+            <p>
+                Đăng ký để nhận tin tức và <br>
+                ưu đãi đặc biệt chỉ dành cho <br>
+                thành viên câu lạc bộ của <br>
+                chúng tôi.
+            </p>
+        </div>
+    </div>
+    <!--SIXTH:END-->
+    <!--FOOTER-->
+    <div class="footer">
+        <ul class="icon">
+            <li> <a href=""></a><i class="fa-brands fa-square-facebook"></i></li>
+            <li> <a href=""></a><i class="fa-brands fa-tiktok"></i></li>
+            <li> <a href=""></a><i class="fa-brands fa-instagram"></i></li>
+            <li> <a href=""></a><i class="fa-brands fa-youtube"></i></li>
+        </ul>
+        <p>© BAKES SAIGON 2023.</p>
+    </div>
+    <script type="module" src="./productdetail.js"></script>
+    <script src="../login/config.js"></script>
+    <script type="module" src="../main.js"></script>
+    <script>
+        var data = 1;
+
+        function increment() {
+            data = data + 1;
+            document.getElementById("input_quantity").value = data;
+        }
+
+        function decrement() {
+            if (data > 1) {
+                data = data - 1;
+                document.getElementById("input_quantity").value = data;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

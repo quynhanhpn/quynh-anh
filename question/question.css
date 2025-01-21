@@ -5,13 +5,14 @@ font-family: 'Raleway', sans-serif; */
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
 }
 html {
   scroll-behavior: smooth;
   margin: 0;
   color: #9E513B;
-  font-size: 15px;
+  /* font-family: serif; */
+  font-family: "Open Sans", sans-serif;
+
 }
 /* .container{
     max-width: 65%;
@@ -31,6 +32,9 @@ ul {
 a {
   text-decoration: none;
 }
+button{
+  border: none;
+}
 .header {
   width: 100%;
   position: fixed;
@@ -43,7 +47,7 @@ a {
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
   align-items: center;
   height: 90px;
 }
@@ -67,13 +71,13 @@ a {
 }
 .nav-list a::after{
   content: "";
-  height: 3px;
+  height: 2px;
   width: 0px;
-  background: rgb(218, 213, 213);
+  background: #CDC5BF;
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.20s ease-in-out;
 }
 .nav-list a:hover::after{
   width: 100%;
@@ -87,12 +91,12 @@ a {
   .nav-close {
     display: none;
   }
-  .nav-menu ul {
+  .nav-list {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .nav-menu ul li {
+  .nav-item {
     padding-right: 20px;
     cursor: pointer;
   }
@@ -117,10 +121,44 @@ a {
   .nav-icon {
     font-size: 19px;
     color: #9E513B;
-    margin-left: 40px;
+    margin-left: 20px;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dropbtn {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
   }
 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    display: none;
+
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content li  {
+    font-size: 15px;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-content {display: block;}
+  
 /***** BARS:END *****/
 /***************** HEADER:END *****************/
 /************** HOME:START *************/

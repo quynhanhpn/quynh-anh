@@ -17,24 +17,34 @@
         <div class="nav-menu" id="nav-menu">
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a href="/order/order.html" class="nav-link "onmouseover="openCity(event, 'cityName')">Đặt hàng </a>
+                    <a href="../products/product.html" class="nav-link ">Đặt hàng </a>
                 </li>
                 
                 <li class="nav-item">
-                    <a href="/about us/about us.html" class="nav-link">Về Bakes</a>
+                    <a href="../about us/about us.html" class="nav-link">Về Bakes</a>
                 </li>
                 <li class="nav-item">
                     <a href="question.html" class="nav-link">Câu hỏi thương gặp</a>
                 </li>
             </ul>
-            <ul class="nav-icon">
-                <li>
-                    <a href="/login/login.html"><i class="fa-regular fa-user"></i></a>
-                </li>
-                <li>
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                </li>
-            </ul>
+            <ul class="nav-icon" icon>
+              <li id="icon-login" style="display: block; margin-right: 20px"  >
+                  <a href="../login/login.html"><i class="fa-regular fa-user"></i></a>
+              </li>
+              <li id="checkuser" class="dropdown">
+                  <ul class="dropbtn"><i class="fa-solid fa-user"></i> </ul>
+                  <ul class="dropdown-content">
+                      <li><a href="userinfo.html" id ="userinfo">User</a></li>
+                      <li ><button id="logout_btn" style="color: #9E513B;">Đăng Xuất</button></li>
+                      <li style="display: none;"  id="managa_btn"><button><a href="../managerproduct.html">Chỉnh sửa sản phẩm</a></button></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="../products/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+              </li>
+          </ul>
+          </ul>
+            
         </div>  
     </nav>
     
@@ -42,7 +52,7 @@
 <!-- HEADER:END -->
 <!-- HOME:START -->
 <section class="home" id="home">
-    <img src="/ảnh/anh3.webp" alt="" class="home-img">        
+    <img src="../picture/anh3.webp" alt="" class="home-img">        
     <div class="home-container container ">
         <div class="home-data">
             <h1 class="home-data-subtitle"></h1>
@@ -191,6 +201,7 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 </script>
-
+<script src="../login/config.js"></script>
+<script type="module" src="../main.js"></script>
 </body>
 </html>

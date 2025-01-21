@@ -16,13 +16,13 @@
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="/order/order.html" class="nav-link">Đặt hàng </a>
+                        <a href="../products/product.html" class="nav-link">Đặt hàng </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/about us/about us.html " class="nav-link">Về Bakes</a>
+                        <a href="../about us/about us.html " class="nav-link">Về Bakes</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/question/question.html" class="nav-link">Câu hỏi thương gặp</a>
+                        <a href="../question/question.html" class="nav-link">Câu hỏi thương gặp</a>
                     </li>
                 </ul>
                 <ul class="nav-icon">
@@ -30,7 +30,7 @@
                         <a href="login.html"><i class="fa-regular fa-user"></i></a>
                     </li>
                     <li>
-                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="../products/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                     </li>
                 </ul>
             </div>  
@@ -39,13 +39,13 @@
     <!-- HEADER:END -->
     <!--BODY:START-->
      <div class="body">
-        <form action="" id="form-register">
+        <form action="" id="signup-form">
             <div class="register" >
                 <h1>TẠO TÀI KHOẢN</h1>
                 <input type="text" placeholder="Tên đầu tiên" id="first-name">
                 <input type="text" placeholder="Họ" id="last-name">
-                <input type="text" placeholder="E-mail" id="email">
-                <input type="password" placeholder="Mật Khẩu" id="password">
+                <input type="text" placeholder="E-mail" id="signup-email">
+                <input type="password" placeholder="Mật Khẩu" id="signup-password">
                 <button id="register-buttom">Tạo nên</button>
                 <a href="login.html">Đăng nhập</a>
             </div>
@@ -112,6 +112,8 @@
         </ul>
         <p>© BAKES SAIGON 2023.</p>
     </div>
-    <script src="./login.js"></script>
+    <script src="config.js"></script>
+    <script type="module" src="register.js">
+    </script>
 </body>
 </html>

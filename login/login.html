@@ -16,13 +16,13 @@
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="/order/order.html" class="nav-link">Đặt hàng </a>
+                        <a href="../products/product.html" class="nav-link">Đặt hàng </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/about us/about us.html " class="nav-link">Về Bakes</a>
+                        <a href="../about us/about us.html " class="nav-link">Về Bakes</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/question/question.html" class="nav-link">Câu hỏi thương gặp</a>
+                        <a href="../question/question.html" class="nav-link">Câu hỏi thương gặp</a>
                     </li>
                 </ul>
                 <ul class="nav-icon">
@@ -30,7 +30,7 @@
                         <a href="login.html"><i class="fa-regular fa-user"></i></a>
                     </li>
                     <li>
-                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="../products/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                     </li>
                 </ul>
             </div>  
@@ -38,12 +38,12 @@
     </header>  
     <!-- HEADER:END -->
     <!--BODY:START-->
-     <form action="" id="form-login">
+     <form action="" id="login-form">
         <div class="body">
             <div class="login">
                 <h1>ĐĂNG NHẬP</h1>
-                <input type="text" placeholder="E-mail" class="email">
-                <input type="password" placeholder="Mật Khẩu" class="password">
+                <input type="text" placeholder="E-mail" id="login-email">
+                <input type="password" placeholder="Mật Khẩu" id="login-password">
                 <button>ĐĂNG NHẬP</button>
                 <a href="register.html">Tạo tài khoản</a>
             </div>
@@ -110,6 +110,9 @@
         </ul>
         <p>© BAKES SAIGON 2023.</p>
     </div>
-    <script src="./login.js"></script>
+    <script src="config.js"></script>
+    <script type="module" src="login.js">
+    </script>
+
 </body>
 </html>

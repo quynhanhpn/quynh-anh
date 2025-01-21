@@ -5,9 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../index.html">
     <link rel="stylesheet" href="order.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    nav {
+        font-family: monospace;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    li {
+        color: #fff;
+        display: block;
+        float: left;
+        padding: 1rem;
+        position: relative;
+        text-decoration: none;
+        transition-duration: 0.5s;
+    }
+
+    li a {
+        color: #fff;
+    }
+
+    li:hover {
+        cursor: pointer;
+    }
+
+    ul li ul {
+        background: rgb(186, 185, 185);
+        visibility: hidden;
+        opacity: 0;
+        height: auto;
+        position: absolute;
+        transition: all 0.5s ease;
+        margin-top: 1rem;
+        left: 0;
+        display: none;
+    }
+    .dropdown>li{
+        font-size: 14px;
+        width: 8rem;
+        height: 3rem;
+
+    }
+    ul li:hover>ul,
+    ul li ul:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+
+    ul li ul li {
+        clear: both;
+        width: 100%;
+    }
+</style>
 <body>
      <!-- HEADER:START -->
      <header class="header" id="header">
@@ -25,12 +88,20 @@
                         <a href="/question/question.html" class="nav-link">Câu hỏi thương gặp</a>
                     </li>
                 </ul>
-                <ul class="nav-icon">
-                    <li>
-                        <a href="/login/login.html"><i class="fa-regular fa-user"></i></a>
+                <ul class="nav-icon" >
+                    <li id="icon-login" style="display: none">
+                        <a href="./login/login.html"><i class="fa-regular fa-user"></i></a>
+                    </li>
+                    <li id="checkuser" >
+                        <img src="../picture/white.jpg" alt="" width="26px" height="26px" style="border-radius: 50%;">
+                        <ul class="dropdown">
+                            <li><a href="../userinfo.html">Sub-1</a></li>
+                            <li ><button id="logout_btn">dang xuat</button></li>
+                            <li style="display: none;"  id="managa_btn"><button><a href="../managerproduct.html">chinh sua sp</a></button></li>
+                        </ul>
                     </li>
                     <li>
-                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="../products/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                     </li>
                 </ul>
             </div>  
@@ -44,40 +115,40 @@
             <div class="title-border"></div>
             <div class="card-flex">
                 <div class="cake-card"> 
-                    <a href="/order/products/product3.html">
+                    <a href="../products/product.html">
                       <div class="cake-title"> BÁNH SINH NHẬT</div>
                       <div class="cake-card-img">
-                         <img src="/ảnh/anh50.jpg" alt="">
+                         <img src="../picture/anh50.jpg" alt="">
                       </div>
                       <div class="cake-content">6 SẢN PHẨM</div>
                       <div class="cake-content2">XEM BỘ SƯU TẬP ></div>
                     </a>
                 </div>
                 <div class="cake-card"> 
-                    <a href="/order/products/product2.html">
+                    <a href="../products/product.html">
                       <div class="cake-title">BÁNH NGỌT</div>
                       <div class="cake-card-img">
-                         <img src="/ảnh/anh58.jpg" alt="">
+                         <img src="../picture/anh58.jpg" alt="">
                       </div>
                       <div class="cake-content">5 SẢN PHẨM </div>
                       <div class="cake-content2">XEM BỘ SƯU TẬP ></div>
                     </a>
                 </div>
                 <div class="cake-card"> 
-                    <a href="/order/products/product4.html">
+                    <a href="../products/product.html">
                       <div class="cake-title"> BÁNH NƯỚNG </div>
                       <div class="cake-card-img">
-                         <img src="/ảnh/anh47.jpg" alt="">
+                         <img src="../picture/anh47.jpg" alt="">
                       </div>
                       <div class="cake-content">4 SẢN PHẨM</div>
                       <div class="cake-content2">XEM BỘ SƯU TẬP ></div>
                     </a>
                 </div>
                 <div class="cake-card"> 
-                    <a href="/order/products/product5.html">
+                    <a href="../products/product.html">
                       <div class="cake-title">ĐỒ UỐNG</div>
                       <div class="cake-card-img">
-                         <img src="/ảnh/anh49.jpg" alt="">
+                         <img src="../picture/anh49.jpg" alt="">
                       </div>
                       <div class="cake-content">3 SẢN PHẨM</div>
                       <div class="cake-content2">XEM BỘ SƯU TẬP ></div>
@@ -151,4 +222,6 @@
         <p>© BAKES SAIGON 2023.</p>
     </div>
 </body>
+<script src="../login/config.js"></script>
+    <script type="module" src="../main.js"></script>
 </html>

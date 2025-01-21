@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="manager.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- HEADER:START -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">B A K E S</a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="./products/product.html" class="nav-link ">Đặt hàng </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./about us/about us.html " class="nav-link">Về Bakes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/question/question.html" class="nav-link">Câu hỏi thương gặp</a>
+                    </li>
+                </ul>
+                <ul class="nav-icon" icon>
+                    <li id="icon-login" style="display: none; margin-right: 20px"  >
+                        <a href="./login/login.html"><i class="fa-regular fa-user"></i></a>
+                    </li>
+                    <li id="checkuser" class="dropdown">
+                        <ul class="dropbtn"><i class="fa-solid fa-user"></i> </ul>
+                        <ul class="dropdown-content">
+                            <li><a href="userinfo.html" id ="userinfo">User</a></li>
+                            <li ><button id="logout_btn" style="color: #9E513B;">Đăng Xuất</button></li>
+                            <li style="display: none;"  id="managa_btn"><button><a href="managerproduct.html">Chỉnh sửa sản phẩm</a></button></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./products/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- HEADER:END -->
+    <div class="main-content" style="padding-top: 120px;">
+        <div class="container">
+            <form id="product-form">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="productName">Tên Sản Phẩm</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="productName" name="productName" placeholder="Tên Sản Phẩm....">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="productPrice">Giá Sản Phẩm</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="productPrice" name="productPrice" placeholder="Giá Sản Phẩm...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="productImg">Ảnh</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="productImg" name="productImg" placeholder="ảnh....">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="product-desription">Miêu tả sản phẩm</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="product-desription" name="product-desription">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="product-type">Loại sản phẩm</label>
+                    </div>
+                    <div class="col-25">
+                        <select id="product-type" name="product-type" name="cars" id="cars" style="width: 50%; cursor: pointer;">
+                            <option value="brithday">Bánh sinh nhật</option>
+                            <option value="sweet">Bánh ngọt</option>
+                            <option value="pies">Bánh nướng</option>
+                            <option value="drink">Đồ uống </option>
+                            <option value="gift">Quà tặng</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="row" style="text-align: right;">
+                    <button type="submit" id="user-form" style="height: 40px; width: 100px;  ">Thêm</button>
+                </div>
+                
+            </form>
+        </div>
+
+        <table class="products" id="products">
+            
+          </table>
+        <script src="./login/config.js"></script>
+        <script type="module" src="manager.js"></script>
+</body>
+
+</html>

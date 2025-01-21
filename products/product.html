@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
+
 <body>
     <!-- HEADER:START -->
      <header class="header" id="header">
@@ -17,21 +18,29 @@
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="/order/order.html" class="nav-link">Đặt hàng </a>
+                        <a href="./product.html" class="nav-link">Đặt hàng </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/about us/about us.html " class="nav-link">Về Bakes</a>
+                        <a href="../about us/about us.html " class="nav-link">Về Bakes</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/question/question.html" class="nav-link">Câu hỏi thương gặp</a>
+                        <a href="../question/question.html" class="nav-link">Câu hỏi thương gặp</a>
                     </li>
                 </ul>
-                <ul class="nav-icon">
-                    <li>
-                        <a href="/login/login.html"><i class="fa-regular fa-user"></i></a>
+                <ul class="nav-icon" icon>
+                    <li id="icon-login" style="display: block; margin-right: 20px"  >
+                        <a href="../login/login.html"><i class="fa-regular fa-user"></i></a>
+                    </li>
+                    <li id="checkuser" class="dropdown">
+                        <ul class="dropbtn"><i class="fa-solid fa-user"></i> </ul>
+                        <ul class="dropdown-content">
+                            <li><a href="userinfo.html" id ="userinfo">User</a></li>
+                            <li ><button id="logout_btn" style="color: #9E513B;">Đăng Xuất</button></li>
+                            <li style="display: none;"  id="managa_btn"><button><a href="../managerproduct.html">Chỉnh sửa sản phẩm</a></button></li>
+                        </ul>
                     </li>
                     <li>
-                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="../products/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                     </li>
                 </ul>
             </div>  
@@ -40,74 +49,37 @@
     </header>  
     <!-- HEADER:END -->
         <div class="wrapper">
-            <div Class="title">
-                <h1 class="menu">MENU</h1>
-                <h2 class="type">QUÀ TẶNG & TRANG TRÍ</h2>
-            </div>
             <div class="container">
                 <div class="sidebar" >
                     <aside>
                         <div class="sidebar-item">
-                            <a href="product1.html">TẤT CẢ</a> 
-                            <div class="box"></div>
+                            <a data-type="all" class="change-type" id="defaultOpen">TẤT CẢ</a> 
                         </div>
                        
                         <div class="sidebar-item">
-                            <a href="product2.html">BÁNH NGỌT</a> 
-                            <div class="box"></div>
+                            <a data-type="brithday" class="change-type"  id="defaultOpen">BÁNH SINH NHẬT</a> 
                         </div>                        
                         
                         <div class="sidebar-item">
-                            <a href="product3.html">BÁNH SINH NHẬT</a> 
-                            <div class="box"></div>
+                            <a  data-type="sweet" class="change-type" id="defaultOpen">BÁNH NGỌT</a>  
                         </div>
                       
                         <div class="sidebar-item">
-                            <a href="product4.html">BÁNH NƯỚNG</a> 
-                            <div class="box"></div>
+                            <a data-type="pies" class="change-type" id="defaultOpen">BÁNH NƯỚNG </a>  
                         </div>                        
                        
                         <div class="sidebar-item">
-                            <a href="product5.html">ĐỒ UỐNG</a> 
-                            <div class="box"></div>
+                            <a data-type="drink" class="change-type" id="defaultOpen">ĐỒ UỐNG </a> 
                         </div>                        
                       
                         <div class="sidebar-item">
-                            <a href="product6.html">QUÀ TẶNG & TRANG TRÍ</a> 
-                            <div class="box">
-                                <div class="child"></div>
-                            </div>
+                            <a data-type="gift" class="change-type" id="defaultOpen">QUÀ TẶNG</a> 
                         </div>                        
                         
                     </aside>
                 </div>
-                <div class="cards">
-                    <div class="cards-left">
-                        <div class="card">
-                             <img src="/ảnh/anh56.jpg" alt="">
-                             <div class="name">
-                              <h3>HỘP QUÀ.................................................</h3>
-                              <p>20.000đ</p>
-                          </div>
-                        </div>
-                        <div class="card">
-                             <img src="/ảnh/anh57.jpg" alt="">
-                             <div class="name">
-                               <h3>BONG BÓNG...........................................</h3>
-                               <p>20.000đ</p>
-                             </div>   
-                        </div>
-                        
-                    </div>
-                    <div class="line"></div>
-                     <div class="cards-right">
-                        
-                       
-                    </div>
-                </div>
-                  
-            
-        </div>
+                <div class="cards"></div>
+            </div>
     <!--SIXTH:START-->
    <div class="sixth-card">
     <div class="sixth-contents">
@@ -170,6 +142,11 @@
         <p>© BAKES SAIGON 2023.</p>
     </div>
      <!--FOOTER:END-->
-    <script src="app.js"></script>
+    <script type="module" src="../main.js"></script>
+    <script type="module"  src="./product.js"></script>
+    <script src="../login/config.js"></script>
+    <script>
+       
+    </script>
 </body>
 </html>

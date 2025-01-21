@@ -10,6 +10,7 @@ html {
   scroll-behavior: smooth;
   margin: 0;
   color: #9E513B;
+  /* font-family: serif; */
   font-family: "Open Sans", sans-serif;
 
 }
@@ -31,6 +32,9 @@ ul {
 a {
   text-decoration: none;
 }
+button{
+  border: none;
+}
 .header {
   width: 100%;
   position: fixed;
@@ -43,7 +47,7 @@ a {
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
   align-items: center;
   height: 90px;
 }
@@ -67,13 +71,13 @@ a {
 }
 .nav-list a::after{
   content: "";
-  height: 3px;
+  height: 2px;
   width: 0px;
-  background: rgb(218, 213, 213);
+  background: #CDC5BF;
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.20s ease-in-out;
 }
 .nav-list a:hover::after{
   width: 100%;
@@ -87,12 +91,12 @@ a {
   .nav-close {
     display: none;
   }
-  .nav-menu ul {
+  .nav-list {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .nav-menu ul li {
+  .nav-item {
     padding-right: 20px;
     cursor: pointer;
   }
@@ -117,10 +121,44 @@ a {
   .nav-icon {
     font-size: 19px;
     color: #9E513B;
-    margin-left: 40px;
+    margin-left: 20px;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dropbtn {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
   }
 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    display: none;
+
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content li  {
+    font-size: 15px;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-content {display: block;}
+  
 /***** BARS:END *****/
 /***************** HEADER:END *****************/
 /************** HOME:START *************/
@@ -309,98 +347,109 @@ a {
     transition: 0.3s;
   }
 }
-/************** HOME:END *************/
-/* FIRST:START */
-.first{
-   padding-top: 100px;
-   height: 100%;
-   width: 100%;
-}
-.story  {
-  height: 40%;
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-.story h1 {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  color: #9E513B;
-  font-size: 50px;
-}
-.story p{
-  margin-top: 50px;
-}
-.first-cards{
-    margin-top: 5%;
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
+.content{
+    margin-top: 150px;
+    height: 75vh;
     width: 80%;
-    justify-content:center;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
-  }
-  h1.tiltle {
-    position: relative;
-    color: rgb(170, 3, 3);
-    width: 100%;
-    text-align: center;
-    font-size: 50px;
 }
-  .first-card{
-    max-width: 25%;
-    height: 60%;
-    margin: 25px;
-  }
-  .offer-col-card {
-    position: relative;
+.img-box{
+    height: 100%;
+    width:  60%;
+}
+.img-box img{
     width: 100%;
-    height: 60%;
-    overflow: hidden;
-  }
-  .img-box img {
-    width: 100%;
-    height: 70%;
+    height: 100%;
     object-fit: cover;
-    background-color: red;
-
-  }
-  .first-content{
+    overflow: hidden;
+}
+.img-wrapper{
+    display: flex;
+    height: 20%;
     width: 100%;
-    height: 10%;
+    margin: 40px;
+
+}
+.img-wrapper div{
+    margin: 5px;
+}
+.img-wrapper img{
+    height: 100%;
+    width: 100%;
+}
+.product-info{
+    width: 40%;
+    height: 100%;
+    padding: 60px;
+}
+.product-name {
+   font-size: 20px;
+}
+.quantity{
+    height: 42px;
+    width: 100px;
+    border: 1px solid #9E513B;
     text-align: center;
-    margin: 10px;
-    line-height: 30px;
-    font-size: 14px;
-    color: #333;
-  }
-  .content-box {
-  
-    position: absolute;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    bottom: -30%;
-    right: 0;
-    width: 92%;
-    height: 16%;
-    transition: 0.5s;
-    color: #333;
-    background-color: whitesmoke;
+    margin-top: 50px;
+    display: flex;
+    cursor: pointer;
+}
+.quantity button{
+   color: #9E513B;
+   cursor: pointer;
+}
+.quantity input{
+    width: 30px;
+    height: 100%;
+    border:none;
     text-align: center;
-    padding: 12px 14px;
-  }
-  .offer-col-card:hover .content-box {
-    bottom: 0;
-  }
-  
-  .content-box a{
-    color: #545a5c;
-  }
-  
-  /* FIRST:END */
-  /* SIXTH:START */
+    font-size: 15px;
+    color: #9E513B;
+}
+.quantity input:focus {
+  outline: none;
+  border: none;  
+}
+
+.quantity button{
+    height: 100%;
+    width: 30px;
+    border:none;
+    font-size: 15px;
+    background-color: white;
+}
+.product-buttom1{
+    height: 55px;
+    width: 100%;
+    margin-top: 15px;
+    color: #9E513B;
+    background-color: white;
+    border: 1px solid #6d311f;
+}
+.product-buttom1:hover{
+    background: rgb(248, 244, 243);
+}
+.product-buttom2{
+    height: 55px;
+    width: 100%;
+    margin-top: 15px;
+    color: white;
+    background-color: #9E513B;
+    border: 1px solid #6d311f;
+}
+.description{
+    margin-top: 8px;
+}
+.preserve{
+    line-height: 40px;
+    margin-top: 90px;
+    height: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .sixth-card{
     margin-top: 150px;
     background-color: rgb(173, 69, 35);
@@ -477,4 +526,3 @@ a {
   .icon li {
     padding: 10px;
   }
-  

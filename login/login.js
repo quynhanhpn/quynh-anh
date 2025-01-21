@@ -1,67 +1,36 @@
-var email_list= ['abc@gmail.com',"abcd@gmail.com"];
-var password_list = ["123",'456'];
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+import { getAuth, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-localStorage.setItem("email_list",JSON.stringify(email_list));
-localStorage.setItem("password_list",JSON.stringify(password_list));
-let form_register = document.querySelector("#form-register");
-let register_buttom = document.querySelector("#register_buttom");
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-function register (){
-    let email = document.querySelector("#email").value;
-   let password = document.querySelector("#password").value;   
 
-   let email_list = localStorage.getItem("email_list");
-   email_list = JSON.parse(email_list);
-   let password_list = localStorage.getItem("password_list" );
-   password_list = JSON.parse(password_list);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth();
+ var loginForm = document.getElementById('login-form');
+loginForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = document.getElementById('login-email').value;
+    var password = document.getElementById('login-password').value;
+    var errorMessage = document.getElementById('error-message');
 
-   for( key of email_list) {
-       if (email == email_list[key]) {
-           alert( "email da ton tai");
-           return
-       }
-       else{
-           email_list.push(email);
-           console.log(email_list);
-           password_list.push(password);
-           localStorage.setItem("email_list",JSON.stringify(email_list));
-           localStorage.setItem("password_list",JSON.stringify(password_list));
-           alert("dang ki thanh cong")
-           break
-       }
-   }
-   }
-form_register.addEventListener("submit", function(event) {
-   event.preventDefault();
-   register()
-})
-
-function login(){
-    var email = document.querySelector(".email").value;
-    var password = document.querySelector(".password").value;
-    var email_list = localStorage.getItem("email_list");
-    email_list = JSON.parse(email_list);
-
-    let password_list = localStorage.getItem("password_list");
-    password_list = JSON.parse(password_list);
-    
-    for(key of email_list){
-        if(email == email_list[key] && password == password_list[key]){
-            alert("dang nhap thanh cong");
-            break
-        }
-        else{
-            alert("dang nhap khong thanh cong");
-            break
-        }
-    }
-}
-
-    var form_login = document.querySelector("#form-login");
-console.log(form_login);
-if(form_login !== ''){
-   form_login.addEventListener("submit", function (event){
-   event.preventDefault();
-   login()
-})
-}
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        const user = userCredential.user;
+        console.log('Đăng nhập thành công: ' + user.email);
+        
+        window.location.href = 'http://127.0.0.1:5502/index.html';
+    })
+    .catch((error) => {
+        var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log('Lỗi đăng nhập: ' + errorMessage);
+            errorMessage.textContent = errorMessage;
+    });
+});
